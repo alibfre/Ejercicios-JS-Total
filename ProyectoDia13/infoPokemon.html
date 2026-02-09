@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="infoPokemon.js" defer></script>
+    <link rel="stylesheet" href="infoPokemon.css" />
+    <title>Información Pokemon</title>
+  </head>
+  <body>
+    <h1>Información Pokemon</h1>
+    <label for="inputPokemon"> Introduce un Pokemon </label>
+    <br />
+    <!--Creo un div y meto dentro el input, de otro modo no funciona del grid-->
+    <div id="inputDiv">
+      <input type="text" id="inputPokemon" placeholder="Nombre de Pokemon" />
+    </div>
+    <br />
+    <!--Lo mismo que con el input anterior pero con el botón -->
+    <div id="botonDiv">
+      <button id="sumbmit" onclick="cargarContenido()">Ver</button>
+    </div>
+    <h3>Imagen</h3>
+    <p id="img">---</p>
+    <h3>Habilidades</h3>
+    <p id="habilidad">---</p>
+    <h3>Peso</h3>
+    <p id="peso">---</p>
+  </body>
+</html>

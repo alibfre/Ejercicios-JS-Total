@@ -1,0 +1,48 @@
+* {
+  font-family: Verdana;
+}
+
+body {
+  background: #d9b72e;
+  background: linear-gradient(
+    90deg,
+    rgba(250, 255, 146, 0.869) 0%,
+    rgba(185, 255, 65, 0.616) 50%,
+    rgb(250, 255, 146, 0.869) 100%
+  );
+}
+
+h1,
+label,
+h3,
+p {
+  display: grid;
+  place-items: center;
+}
+
+#inputDiv {
+  display: grid;
+  place-items: center;
+}
+
+#botonDiv {
+  display: grid;
+  place-items: center;
+}
+
+button {
+  width: 10%;
+  height: 30px;
+  border: none;
+  background-color: #305d0d;
+  color: white;
+}
+button:hover{
+    background-color: white;
+    color: #305d0d;
+    border: 1px solid #305d0d;
+}
+
+h1, p, h3, label{
+    color: #1e4100;
+}
