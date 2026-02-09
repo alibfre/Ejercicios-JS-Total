@@ -1,0 +1,37 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  padding: 2%;
+  margin-left: 32%;
+}
+
+#seleccion {
+  padding: 2%;
+  margin-left: 35%;
+}
+
+#inputBoton {
+  padding: 2%;
+  margin-left: 35%;
+  margin-top: -4 0px;
+}
+
+input{
+    width: auto;
+    height: 40px;
+    font-size: 15px;
+}
+
+button{
+    width: 100px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+select{
+    width: 80px;
+    height: 40px;
+}

@@ -1,0 +1,22 @@
+----- EJERCICIOS -----
+
+Día 3 - Web que ofrece 30 segundos para responder a cuatro preguntas. Cuando se acaba el tiempo muestra una alerta. Si el usuario responde a las preguntas, muestra una alerta con la fecha y sus respuestas. 
+
+Día 4 - Calculadora básica.
+
+Día 5 - Web que permite al usuario introducir su edad y su género favorito y, a partir de ello, muestra una película recomendada.
+
+Día 6 - Boletín de notas. Muestra las notas,la media, la nota más alta y la más baja.
+
+Día 7 - Web de venta de donuts. Calcula las ventas totales, además de mostrar en rojo al venta más baja y en verde la más alta. El número de tiendas se genera dinámicamente pasándole ese valor (el número de tiendas que queremos ver) por parámetro a la función crearTiendas().
+
+Día 8 - Web que permite ingresar los datos de un empleado. Después, el empleado es cargado en la lista y mostrado junto con todos los empleados que haya en el array.
+
+Día 9 - Web que muestra los coches guardados en un array. A través de la consola se puede utilizar la función venderCoche(), que cambia el titular del mismo, o encender coche, que muestra una alerta. Tambien se puede utilizar verCoche() para comprobar que el titular ha cambiado tras la función vender.
+
+Día 10 - Similar al ejercicio anterior, pero muestra una característica adicional en cada elemento. Funciona con herencia.
+
+Día 11 - Web que muestra los datos de un cliente de un banco. Los datos son recuperados de un json.
+
+Día 12 - Buscador de películas y series (almacenadas en un json). Al pasar el ratón por encima muestra una sinopsis de la película o la serie.
+

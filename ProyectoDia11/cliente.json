@@ -1,0 +1,9 @@
+{
+    "nombreBanco": "Caja Rural",
+    "nombreCliente": "Martina Fernandez",
+    "numeroCuenta":"ES85 6784 7362 3774 9493",
+    "saldo":{
+        "usd": 1500,
+        "eur": 1450
+    }
+}
