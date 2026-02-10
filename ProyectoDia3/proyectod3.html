@@ -9,30 +9,34 @@
   <body onload="comenzar30()">
     <h2>Responde a las preguntas en menos de 30 segundos</h2>
     <h1 id="textoAlarma">30</h1>
+
     <p>¿Cuál es la capital de España?</p>
     <input type="text" id="r1" />
+
     <p>¿Cuál es la capital de Portugal?</p>
     <input type="text" id="r2" />
+
     <p>¿Cuál es la capital de Francia?</p>
     <input type="text" id="r3" />
+
     <p>¿Cuál es la capital de Alemania?</p>
     <input type="text" id="r4" />
     <br />
     <br />
-    <button onclick="respuestasFinales()">¡Terminé!</button> 
+    <button onclick="respuestasFinales()">¡Terminé!</button>
     <button onclick="reintentar()">Reiniciar</button>
 
     <script>
       let tiempoTerminado;
       let intervalo;
 
-      function comenzar30() {
+      const comenzar30 = () => {
         tiempoTerminado = setTimeout(tiempoCumplido, 31000);
         intervalo = setInterval(ticTac, 1000);
-      }
+      };
 
       function ticTac() {
-        let tiempo = document.getElementById("textoAlarma").innerHTML;
+        const tiempo = document.getElementById("textoAlarma").innerHTML;
         document.getElementById("textoAlarma").innerHTML = tiempo - 1;
       }
 
@@ -41,21 +45,32 @@
         alert("¡Se acabó el tiempo!");
       }
 
-      function respuestasFinales(){
-        let fecha = new Date();
-        let respuesta1 = document.getElementById("r1").value;
-        let respuesta2 = document.getElementById("r2").value;
-        let respuesta3 = document.getElementById("r3").value;
-        let respuesta4 = document.getElementById("r4").value;
-        let mensaje = fecha.toLocaleDateString("es-ES") + "\n" +
-        "1. " + respuesta1 + "\n" +
-        "2. " + respuesta2 + "\n" +
-        "3. " + respuesta3 + "\n" +
-        "4. " + respuesta4 + "\n";
-        alert(mensaje)
+      function respuestasFinales() {
+        const fecha = new Date();
+        const respuesta1 = document.getElementById("r1").value;
+        const respuesta2 = document.getElementById("r2").value;
+        const respuesta3 = document.getElementById("r3").value;
+        const respuesta4 = document.getElementById("r4").value;
+        const mensaje =
+          fecha.toLocaleDateString("es-ES") +
+          "\n" +
+          "1. " +
+          respuesta1 +
+          "\n" +
+          "2. " +
+          respuesta2 +
+          "\n" +
+          "3. " +
+          respuesta3 +
+          "\n" +
+          "4. " +
+          respuesta4 +
+          "\n";
+
+        alert(mensaje);
       }
 
-      function reintentar(){
+      function reintentar() {
         location.reload();
       }
     </script>

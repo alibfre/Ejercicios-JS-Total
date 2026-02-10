@@ -4,9 +4,8 @@ class Animal {
     this.peso = peso;
     this.edad = edad;
   }
-  informacion() {
-    return this.nombre + " - " + this.peso + " kg - " + this.edad + " años";
-  }
+
+  informacion = () => `${this.nombre} - ${this.peso} kg - ${this.edad} años`;
 }
 
 class Perro extends Animal {
@@ -14,6 +13,7 @@ class Perro extends Animal {
     super(nombre, peso, edad);
     this.raza = raza;
   }
+
   informacion() {
     return (
       this.nombre +

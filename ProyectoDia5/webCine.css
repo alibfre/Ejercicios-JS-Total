@@ -2,6 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: #b4e2e3;
   color: rgb(71, 83, 94);
+  --primary: #def6f7;
 }
 p {
   font-size: 20px;
@@ -12,19 +13,19 @@ input {
   width: 10%;
   height: 30px;
   border-radius: 10px;
-  background-color: #def6f7;
+  background-color: var(--primary);
 }
 
 button {
   width: 10%;
   height: 30px;
   border-radius: 10px;
-  background-color: #def6f7;
+  background-color: var(--primary);
   font-size: 18px;
 }
 
 button:hover {
   scale: 105%;
   background-color: rgb(71, 83, 94);
-  color: #def6f7;
+  color: var(--primary);
 }
