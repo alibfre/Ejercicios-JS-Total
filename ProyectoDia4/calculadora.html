@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script src="calculadora.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="calcualdora.css" />
@@ -8,29 +9,39 @@
     <title>Calculadora</title>
   </head>
   <body>
-    <script src="calculadora.js"></script>
     <h2>Calculadora</h2>
-    <input type="number" style="width: 70px" id="num1" />
-    <input type="number" style="width: 70px" id="num2" />
-    <br />
-    <br />
-    <button style="width: 35px" onclick="sumar()">+</button>
-    <button style="width: 35px" onclick="restar()">-</button>
-    <button style="width: 35px" onclick="multiplicar()">*</button>
-    <button style="width: 35px" onclick="dividir()">/</button>
-    <br />
-    <br />
-    <button style="width: 70px" onclick="potencia()">pot</button>
-    <button style="width: 70px" onclick="raiz()">raiz</button>
-    <br />
-    <br />
-    <button style="width: 70px" onclick="absoluto()">absol</button>
-    <button style="width: 70px" onclick="random()">rand</button>
-    <br />
-    <br />
-    <button onclick="round()">round</button>
-    <button onclick="floor()">floor</button>
-    <button onclick="ceil()">ceil</button>
+
+    <div class="calculadora">
+      <div class="fila input-usuario">
+        <input type="number" style="width: 70px" id="num1" />
+        <input type="number" style="width: 70px" id="num2" />
+      </div>
+
+      <div class="fila operaciones">
+        <button onclick="sumar()">+</button>
+        <button onclick="restar()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
+      </div>
+
+      <div class="fila operaciones-complejas">
+        <button class="big-button" onclick="potencia()">pot</button>
+        <button class="big-button" onclick="raiz()">raiz</button>
+      </div>
+
+      <div class="fila operaciones-complejas">
+        <button class="big-button" onclick="absoluto()">absol</button>
+        <button class="big-button" onclick="random()">rand</button>
+      </div>
+
+      <div class="fila operaciones-complejas">
+        <button class="big-button" onclick="round()">round</button>
+        <button class="big-button" onclick="floor()">floor</button>
+        <button class="big-button" onclick="ceil()">ceil</button>
+      </div>
+      <div class="fila"></div>
+    </div>
+
     <h1 id="resultado">---</h1>
   </body>
 </html>

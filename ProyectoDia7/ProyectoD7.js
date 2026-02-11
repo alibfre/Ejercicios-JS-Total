@@ -1,15 +1,16 @@
-function crearTiendas(contenedorID, min, cantidadTiendas) {
+window.onload = () =>
+  crearTiendas("itemsTienda", { min: 0, cantidadTiendas: 7 });
+
+const crearTiendas = (contenedorID, { min, cantidadTiendas }) => {
   let elementoContenedor = document.getElementById(contenedorID);
-  for (
-    let conteoTiendas = 1;
-    conteoTiendas <= cantidadTiendas;
-    conteoTiendas++
-  ) {
-    let textoEtiqueta = "Tienda " + conteoTiendas;
-    let parrafoTienda = crearParrafoTienda(textoEtiqueta, min);
+  const numeroTiendas = Array.from({ length: cantidadTiendas }, (_, i) => i);
+
+  numeroTiendas.forEach((_, i) => {
+    const parrafoTienda = crearParrafoTienda(`Tienda ${i + 1}`, min);
     elementoContenedor.appendChild(parrafoTienda);
-  }
-}
+  });
+};
+
 function crearParrafoTienda(textoLabel, valorMin) {
   let elementoParrafo = document.createElement("p");
   let elementoLabel = document.createElement("label");
@@ -22,13 +23,14 @@ function crearParrafoTienda(textoLabel, valorMin) {
   elementoInput.setAttribute("value", 0);
   elementoParrafo.appendChild(elementoLabel);
   elementoParrafo.appendChild(elementoInput);
-
   return elementoParrafo;
 }
+
 function calcular() {
   let ventas = [];
   let posVentas = 0;
   let elementosVentas = document.getElementById("itemsTienda");
+
   for (let item of elementosVentas.children) {
     let valorVenta = +item.children[1].value;
     ventas[posVentas] = valorVenta;
@@ -41,18 +43,18 @@ function calcular() {
 
   for (let item of elementosVentas.children) {
     let valorVenta = +item.children[1].value;
-    item.children[1].className="menuNeutro";
-    if(valorVenta == ventaMayor){
-      item.children[1].className="menuMayor";
+    item.children[1].className = "menuNeutro";
+    if (valorVenta === ventaMayor) {
+      item.children[1].className = "menuMayor";
     }
-    if(valorVenta == ventaMenor){
-      item.children[1].className="menuMenor";
+
+    if (valorVenta === ventaMenor) {
+      item.children[1].className = "menuMenor";
     }
   }
 
-  let mensaje = "Total ventas: " + totalVentas;
   let elementoSalida = document.getElementById("msjFinal");
-  elementoSalida.textContent = mensaje;
+  elementoSalida.textContent = `Total ventas: ${totalVentas}`;
 }
 
 function sumarTotal(array) {
@@ -63,15 +65,7 @@ function sumarTotal(array) {
   return total;
 }
 
-function mayor(array) {
-  let max = array[0];
-  for (let venta of array) {
-    if (venta > max) {
-      max = venta;
-    }
-  }
-  return max;
-}
+const mayor = (array) => Math.max(...array);
 
 function menor(array) {
   let min = array[0];

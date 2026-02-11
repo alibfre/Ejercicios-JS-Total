@@ -3,6 +3,19 @@
   font-size: 20px;
 }
 
+.calculadora {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 8px;
+  flex-direction: column;
+  width: 30%;
+  border-color: rgb(68, 118, 46);
+  box-shadow: 2px 2px rgb(3, 58, 24);
+}
+
 button {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(84, 147, 57);
@@ -11,14 +24,22 @@ button {
   font-weight: bold;
   border-color: rgb(68, 118, 46);
   box-shadow: 2px 2px rgb(3, 58, 24);
+  width: 35px;
 }
+
 button:hover {
   scale: 105%;
 }
+
+.big-button {
+  width: 70px;
+}
+
 h2,
 h1 {
   font-size: 35px;
 }
+
 h2 {
   background-color: rgb(84, 147, 57);
   color: white;
@@ -26,6 +47,7 @@ h2 {
   border-radius: 10px;
   width: 55%;
 }
+
 input {
   border-color: rgb(68, 118, 46);
   box-shadow: 2px 2px rgb(3, 58, 24);

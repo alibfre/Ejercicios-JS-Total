@@ -4,6 +4,7 @@ function Empleado(nombre, apellido, edad, cargo) {
   this.edad = document.getElementById("edad").value;
   this.cargo = document.getElementById("cargo").value;
 }
+
 let arrayEmpleados = [];
 
 function añadir() {
