@@ -4,29 +4,31 @@ async function cargarContenido() {
 }
 
 async function obtenerPokemon() {
-  
-  let pokemonInput = document.getElementById("inputPokemon").value;
-  let enlace = "https://pokeapi.co/api/v2/pokemon/" + pokemonInput;
-  let resPokemon = await fetch(enlace);
-  let datosPokemon = await resPokemon.json();
+  const pokemonInput = document.getElementById("inputPokemon").value;
+  const enlace = "https://pokeapi.co/api/v2/pokemon/" + pokemonInput;
+  const resPokemon = await fetch(enlace);
+  const datosPokemon = await resPokemon.json();
 
-  let peso = document.getElementById("peso");
+  const peso = document.getElementById("peso");
   peso.innerHTML = datosPokemon.weight;
 
-  let habilidades = document.getElementById("habilidad");
-  habilidades.innerHTML =
-    datosPokemon.abilities[0].ability.name +
-    "<br>" +
-    datosPokemon.abilities[1].ability.name;
+  let cont = 0;
+  const habilidades = document.getElementById("habilidad");
+  for (let habilidad of datosPokemon.abilities) {
+    habilidades.innerHTML = datosPokemon.abilities[cont].ability.name;
+  }
 
-  let imagen = document.getElementById("img");
-  imagen.innerHTML = "<img src = " + datosPokemon.sprites.front_default + " width = 10%>";
+  const imagen = document.getElementById("img");
+  imagen.innerHTML =
+    "<img src = " +
+    datosPokemon.sprites.other["official-artwork"].front_default +
+    " width = 10%>";
 }
 
 function pantallaCarga() {
-  let imagenCarga = document.getElementById("img");
-  let habilidadCarga = document.getElementById("habilidad");
-  let pesoCarga = document.getElementById("peso");
+  const imagenCarga = document.getElementById("img");
+  const habilidadCarga = document.getElementById("habilidad");
+  const pesoCarga = document.getElementById("peso");
 
   imagenCarga.innerHTML = "<img src = 'loading.gif' width = 10%>";
   habilidadCarga.innerHTML = "<img src = 'loading.gif' width = 10%>";
